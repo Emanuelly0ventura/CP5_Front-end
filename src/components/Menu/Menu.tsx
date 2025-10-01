@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
-
+import {Link} from "react-router-dom";
 export default function Menu(){
 
     return(
-        <nav  >
-            <Link to="/" >Home</Link>
-            <Link to="/cadastro/produtos">Cadastro</Link>
-        </nav>
+        
+            <nav  >
+                <Link to="/cadastro" >Cadastro</Link> |  
+                <Link to="/Login">Login</Link>
+            </nav>
+        
     );
 }

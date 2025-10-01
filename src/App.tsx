@@ -3,7 +3,8 @@ import Cabecalho from './components/Cabecalho/Cabecalho';
 import Rodape from './components/Rodape/Rodape';
 
 
-function App() {
+
+export default function App() {
   
   return (
     <>
@@ -17,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+
