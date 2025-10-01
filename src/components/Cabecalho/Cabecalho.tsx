@@ -5,7 +5,7 @@ export default function Cabecalho(){
 
     return(
         <header>
-            <h1>Processamento de Produtos</h1>
+            <h1>Menu</h1>
             <Menu/>
         </header>
     );
