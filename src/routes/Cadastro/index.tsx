@@ -12,15 +12,16 @@ export default function Cadastro(){
     const navigate = useNavigate();
 
     const onSubmit = async (data: CadastroData) => {
-    const res = await fetch("http://localhost:5173/usuarios?nomeUsuario=${data.nomeUsuario}&email=${data.email}");
+    const res = await fetch("http://localhost:3000/usuarios?nomeUsuario=${data.nomeUsuario}&email=${data.email}");
     const users = await res.json();
+    console.log(users);
 
     if (users.length > 0) {
       alert("Nome de usuário ou email já cadastrado!");
       return;
     }
 
-    await fetch("http://localhost:5173/usuarios", {
+    await fetch("http://localhost:3000/usuarios", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
