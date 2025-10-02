@@ -7,22 +7,21 @@ type LoginData = {
 };
 
 export default function Login(){
-    document.title ="Login"
     const { register, handleSubmit, formState: { errors } } = useForm<LoginData>();
     const navigate = useNavigate();
-
     const onSubmit = async (data: LoginData) => {
-    
-    const res = await fetch(`http://localhost:3000/usuarios?nomeUsuario=${data.nomeUsuario}&email=${data.email}`);
-    const users = await res.json();
 
-    if (users.length > 0) {
-      localStorage.setItem("usuarioLogado", JSON.stringify(users[0]));
-      navigate("/cadastro"); // só pra testar navegação
-    } else {
-      alert("Usuário ou email inválido!");
-    }
-  };
+
+        const res = await fetch(`http://localhost:3000/usuarios?nomeUsuario=${data.nomeUsuario}&email=${data.email}`);
+        const users = await res.json();
+
+        if (users.length > 0) {
+            localStorage.setItem("usuarioLogado", JSON.stringify(users[0]));
+            navigate("/cadastro");
+        } else {
+            alert("Usuário ou email inválido!");
+        }
+    };
 
     return (
         <div>
