@@ -9,11 +9,11 @@ export default function App() {
   return (
     <>
       <div className="container">
-      <Cabecalho/>
-      <Outlet/>
-      <Rodape/>
+        <Cabecalho/>
+        <Outlet/>
+        <Rodape/>
       
-    </div>
+      </div>
     </>
   )
 }
