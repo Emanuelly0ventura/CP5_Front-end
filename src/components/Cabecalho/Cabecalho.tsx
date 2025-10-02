@@ -5,7 +5,7 @@ export default function Cabecalho(){
 
     return(
         <header>
-            <h1>Menu</h1>
+            <h1>PetShop Dias de cão🐶</h1>
             <Menu/>
         </header>
     );
