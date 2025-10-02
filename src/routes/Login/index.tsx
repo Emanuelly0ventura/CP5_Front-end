@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 type FormData = {
@@ -43,6 +42,23 @@ export default function Login(){
 
                 </div>
 
+                <div>
+                    <label>Email</label>
+                    <input type="email"
+                        {...register("email", {
+                            required: "O email é obrigatório",
+                            pattern: {
+                                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                message: "Formato de email inválido",
+                            },
+                        })}
+                    />
+                    {errors.email && (
+                        <p>{errors.email.message}</p>
+                    )}
+                </div>
+
+                <button type="submit">Entrar</button>
 
             </form>
 
