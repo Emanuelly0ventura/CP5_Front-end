@@ -8,10 +8,11 @@ type FormData = {
 
 export default function Login(){
     document.title ="Login"
-    const methods = useForm();
-    const register = methods.register;
-    const handleSubmit = methods.handleSubmit;
-    const errors = methods.formState.errors;
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm<FormData>(); 
 
     const onSubmit = (data: FormData) => {
         console.log("Dados invalidos: ", data);
@@ -24,14 +25,29 @@ export default function Login(){
                 <h2>Login</h2>
                 <div>
                     <label>Nome de usuario</label>
+                    <input 
+                        type="text" 
+                        {...register("nomeUsuario", {
+                            required: "O nome de usuário é obrigatorio",
+                            minLength: {
+                                value: 3,
+                                message: "O nome deve ter pelo menos 3 caracteres",
+                            },
+                        })}
+                    />
+                    {errors.nomeUsuario && (
+                        <p>
+                            {errors.nomeUsuario.message} 
+                        </p>
+                    )}
+
                 </div>
+
 
             </form>
 
         </div>
     )
-
-
 
 }
 
