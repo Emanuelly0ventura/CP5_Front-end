@@ -1,11 +1,17 @@
+
+
+type CadastroData = {
+  nome: string;
+  nomeUsuario: string;
+  email: string;
+};
+
 export default function Cadastro(){
 
-    document.title ="Cadastro"
+    
 
     return(
-        <main>
-            <h1>Cadastrar de usuario</h1>
-        </main>
+        <h2>Cadastro</h2>
     );
 
 }
