@@ -12,7 +12,6 @@ export default function Cadastro(){
     const navigate = useNavigate();
 
     const onSubmit = async (data: CadastroData) => {
-    // verificar duplicidade
     const res = await fetch(`http://localhost:3000/usuarios?nomeUsuario=${data.nomeUsuario}&email=${data.email}`);
     const users = await res.json();
 
@@ -21,7 +20,6 @@ export default function Cadastro(){
       return;
     }
 
-    // cadastrar no json-server
     await fetch("http://localhost:3000/usuarios", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -34,7 +32,34 @@ export default function Cadastro(){
     
 
     return(
-        <h2>Cadastro</h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+                <h2>Cadastro</h2>
+            <div>
+                <label>Nome</label>
+                <input {...register("nome", { required: "Nome obrigatório" })} />
+                {errors.nome && <p>{errors.nome.message}</p>}
+            </div>
+
+            <div>
+                <label>Nome de usuário</label>
+                <input {...register("nomeUsuario", { required: "Nome de usuário obrigatório" })} />
+                {errors.nomeUsuario && <p>{errors.nomeUsuario.message}</p>}
+            </div>
+
+            <div>
+                <label>Email</label>
+                <input
+                    type="email"
+                    {...register("email", {
+                    required: "Email obrigatório",
+                    pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Email inválido" }
+                    })}
+                />
+                {errors.email && <p>{errors.email.message}</p>}
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
     );
 
 }
