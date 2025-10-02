@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useNavigate} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 type LoginData = {
   nomeUsuario: string;
@@ -64,7 +64,8 @@ export default function Login(){
                 </div>
 
                 <button type="submit">Entrar</button>
-
+                
+                <p>Não tem conta? <Link to="/cadastro">Cadastre-se</Link></p>
             </form>
 
         </div>
