@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import type { Usuario } from "../../type/tipoUsuario";
 
 type CadastroData = {
   nome: string;
@@ -13,9 +14,10 @@ export default function Cadastro() {
 
   const onSubmit = async (data: CadastroData) => {
     const res = await fetch(`http://localhost:3000/usuarios?nomeUsuario=${data.nomeUsuario}&email=${data.email}`);
-    const users = await res.json();
+    
+    const users: Usuario[] = await res.json();
     const usuarioExistente = users.find(
-      (u: any) => u.nomeUsuario === data.nomeUsuario || u.email === data.email
+      (u) => u.nomeUsuario === data.nomeUsuario || u.email === data.email
     );
 
     if (usuarioExistente) {
