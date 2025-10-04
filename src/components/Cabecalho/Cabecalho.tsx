@@ -1,11 +1,13 @@
 import Menu from "../Menu/Menu";
 
-
 export default function Cabecalho(){
 
     return(
         <header>
-            <h1>PetShop Dias de cão🐶</h1>
+            <div>
+                <h1>PetShop Dias de Cão🐶</h1>
+            </div>
+
             <Menu/>
         </header>
     );

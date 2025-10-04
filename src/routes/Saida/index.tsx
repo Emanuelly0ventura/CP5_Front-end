@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../../Providencia";
 import { useNavigate } from "react-router-dom";
+import '../../globals.css'
 
 export default function Saida() {
     const { user } = useContext(UserContext);
@@ -11,7 +12,7 @@ export default function Saida() {
     }
 
   return (
-    <div>
+    <div className="">
         {(() => {
             if (user) {
                 return <h1>Bem-vindo! {user.nome} | NomeUsuario: {user.nomeUsuario} | Email: {user.email}🐹</h1>;
@@ -20,6 +21,8 @@ export default function Saida() {
                 return <p>Nenhum usuário logado</p>;
             }
         })()}
+
+    
 
         <h2>🐾 Bem-vindo ao Dias de Cão PetShop!🐾</h2>
         <h3></h3>

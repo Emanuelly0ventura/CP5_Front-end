@@ -1,2 +1,57 @@
 @import "tailwindcss";
-:root{ scroll-behavior: smooth; }
+
+@theme {
+  --breakpoint-xs: 300px;
+}
+
+@layer base{
+    .app-shell{
+        @apply max-w-full min-h-dvh flex flex-col;
+
+        & header {
+           @apply w-full flex flex-col items-center justify-center;
+        }
+
+        & header div {
+            @apply w-full mx-auto bg-[#9D5151] flex flex-row justify-center items-center px-7 py-7 text-[48px] text-white font-bold;
+        }
+
+         & header nav {
+            @apply text-white bg-[#7E3030]
+            w-full p-3 mx-auto flex flex-col items-center justify-center gap-x-13 gap-y-2 p-4
+            xs:flex-row
+            sm:flex-row
+            md:flex-row
+            lg:flex-row
+            lg:flex-row;
+        }
+
+        & header nav a {
+            @apply inline-block rounded-xl px-6 py-1 hover:bg-white/10 transition text-sm
+            xs:text-base
+            sm:text-xl
+            md:text-xl
+            lg:text-2xl
+            2xl:text-2xl;
+        }
+
+        & header nav a:hover {
+            @apply shadow-2xl text-white;
+        }
+
+        & main {
+            @apply flex-1;
+        }
+
+        & footer {
+            @apply bg-[#9D5151] text-[12px] w-full p-3 text-center text-white
+            xs:text-[12px] xs:p-2
+            sm:text-[15px] sm:p-3
+            md:text-[18px] md:p-3
+            lg:text-[18px] lg:p-4
+            2xl:text-[18px] 2xl:p-4;
+        }
+       
+    }
+}
+

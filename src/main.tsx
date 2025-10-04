@@ -7,6 +7,7 @@ import Cadastro from './routes/Cadastro/index.tsx';
 import Login from './routes/Login/index.tsx';
 import Saida from './routes/Saida/index.tsx';
 import { Providencias } from './Providencia.tsx';
+import './globals.css';
 
 
 const router = createBrowserRouter([
