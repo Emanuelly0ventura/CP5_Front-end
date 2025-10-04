@@ -52,6 +52,61 @@
             2xl:text-[18px] 2xl:p-4;
         }
        
+        
     }
+
+
 }
 
+@layer components{
+    .universal-title{
+        @apply text-center font-bold text-lg mb-5 mt-8 text-[#262626]
+        xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+    }
+
+    .universal-card {
+        @apply pb-[25px] flex justify-center px-4 xs:px-6 sm:px-8 md:px-10 my-6 xs:my-8 sm:my-10; 
+    }
+
+    .universal-form{
+        @apply bg-[#E4CBCB] rounded-3xl shadow-xl p-6 w-full max-w-[520px] xs:max-w-[500px] sm:max-w-[520px] md:max-w-[520px] lg:max-w-[520px];
+    }
+
+    .universal-field{
+        @apply mb-4 xs:mb-5 sm:mb-6;
+    }
+
+    .universal-input{
+        @apply w-full bg-white text-slate-900 border-0 rounded-2xl px-3 py-2 shadow-sm outline-none xs:px-4 xs:py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3;
+    }
+
+    .universal-input:focus {
+        @apply ring-2 ring-[#DB7272];
+    }
+
+    .universal-label{
+        @apply mb-3 block text-base font-semibold text-slate-700;
+    }
+
+    .universal-div-btn{
+        @apply flex justify-center text-center;
+    }
+
+    .universal-btn{
+        @apply bg-[#DB7272] flex justify-center font-semibold px-6 py-2 border-0 rounded-full cursor-pointer shadow transition-colors xs:px-7 xs:py-2.5 sm:px-8 sm:py-3 md:px-10 md:py-3.5 text-sm sm:text-base md:text-lg;
+    }
+
+    .universal-btn:hover {
+        @apply bg-[#F78981];
+    }
+
+    .universal-btn:disabled {
+        @apply opacity-60 cursor-not-allowed;
+    }
+
+    .universal-error {
+        @apply text-[#DB7272] text-xs mt-1 xs:text-sm font-bold
+    }
+
+    
+}
