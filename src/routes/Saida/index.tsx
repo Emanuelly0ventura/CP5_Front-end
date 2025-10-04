@@ -12,31 +12,33 @@ export default function Saida() {
     }
 
   return (
-    <div className="">
-        {(() => {
-            if (user) {
-                return <h1>Bem-vindo! {user.nome} | NomeUsuario: {user.nomeUsuario} | Email: {user.email}🐹</h1>;
-                        
-            } else {
-                return <p>Nenhum usuário logado</p>;
-            }
-        })()}
+    <main>
+        <div className="">
+            {(() => {
+                if (user) {
+                    return <h1 className="universal-title">Bem-vindo! {user.nome} | NomeUsuario: {user.nomeUsuario} | Email: {user.email}🐹</h1>;
+                            
+                } else {
+                    return <p>Nenhum usuário logado</p>;
+                }
+            })()}
 
-    
+        
 
-        <h2>🐾 Bem-vindo ao Dias de Cão PetShop!🐾</h2>
-        <h3></h3>
-        <p>Escolha uma opção abaixo:</p>
+            <h2>🐾 Bem-vindo ao Dias de Cão PetShop!🐾</h2>
+            <h3></h3>
+            <p>Escolha uma opção abaixo:</p>
 
-        <div>
-            <button onClick={() => navigate("")}>Marcar Consulta🐶</button>
-            <button onClick={() => navigate("")}>Ver Receita🐰</button>
-            <button onClick={() => navigate("")}>Itens da Loja🐱</button>
-            <button onClick={() => navigate("")}>Marcar Exames🐠</button>
-            <button onClick={() => navigate("")}>Avaliação🦜</button>
+            <div>
+                <button onClick={() => navigate("")}>Marcar Consulta🐶</button>
+                <button onClick={() => navigate("")}>Ver Receita🐰</button>
+                <button onClick={() => navigate("")}>Itens da Loja🐱</button>
+                <button onClick={() => navigate("")}>Marcar Exames🐠</button>
+                <button onClick={() => navigate("")}>Avaliação🦜</button>
+            </div>
+
         </div>
-
-    </div>
+    </main>
   );
 }
 
