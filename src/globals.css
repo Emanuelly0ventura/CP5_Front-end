@@ -108,5 +108,37 @@
         @apply text-[#DB7272] text-xs mt-1 xs:text-sm font-bold
     }
 
+    .error-page {
+        @apply min-h-screen flex items-center justify-center bg-slate-100 p-4 xs:p-6 sm:p-8 md:p-10 lg:p-12;
+        font-family: Arial, sans-serif;
+    }
+
+    .error-container {
+        @apply bg-white rounded-2xl shadow-2xl w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-4 py-6 xs:px-6 xs:py-8 sm:px-8 sm:py-10 md:px-10 md:py-12;
+    }
+
+    .error-icon {
+        @apply text-[#7E3030] block mx-auto mb-3 text-5xl xs:text-6xl sm:text-7xl md:text-8xl xl:text-9xl;
+    }
+
+     .error-title {
+        @apply text-[#7E3030] text-center font-bold mb-3 text-3xl xs:text-4xl sm:text-5xl md:text-6xl xl:text-7xl;
+    }
+
+     .error-message {
+        @apply text-slate-600 text-center mb-8 text-sm xs:text-base sm:text-lg md:text-xl;
+    }
+
+    .error-button {
+        @apply flex flex-row w-fit mx-auto gap-2 bg-[#7E3030] text-white font-semibold px-4 py-2 xs:px-5 xs:py-2.5 sm:px-6 md:px-7 md:py-3 rounded-full transition-colors;
+    }
+
+    .error-button:hover {
+        @apply bg-[#9D5151];
+    }
+
+    .error-button-icon {
+        @apply text-sm xs:text-base sm:text-lg;
+    }
     
 }
