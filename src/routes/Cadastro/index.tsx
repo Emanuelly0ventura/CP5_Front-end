@@ -39,8 +39,8 @@ export default function Cadastro() {
 
   return (
     <main>
-
       <h1 className="universal-title">Cadastro</h1>
+      
       <div className="universal-card"> 
         <div className="universal-form">
           <form onSubmit={handleSubmit(onSubmit)}>

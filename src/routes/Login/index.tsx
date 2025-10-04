@@ -33,42 +33,48 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h2>Login</h2>
-        <div>
-          <label>Nome de usuário</label>
-          <input
-            type="text"
-            {...register("nomeUsuario", {
-              required: "O nome de usuário é obrigatório",
-              minLength: {
-                value: 3,
-                message: "O nome deve ter pelo menos 3 caracteres",
-              },
-            })}
-          />
-          {errors.nomeUsuario && <p>{errors.nomeUsuario.message}</p>}
-        </div>
+    <main>
+      <h1 className="universal-title">Login</h1>
+      <div className="universal-card">
+        <div className="universal-form">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="universal-field">
+              <label className="universal-label">Nome de usuário</label>
+              <input className="universal-input" placeholder="Digite o nome de usuário..."
+                type="text"
+                {...register("nomeUsuario", {
+                  required: "O nome de usuário é obrigatório",
+                  minLength: {
+                    value: 3,
+                    message: "O nome deve ter pelo menos 3 caracteres",
+                  },
+                })}
+              />
+              {errors.nomeUsuario && <p className="universal-error">{errors.nomeUsuario.message}</p>}
+            </div>
 
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            {...register("email", {
-              required: "O email é obrigatório",
-              pattern: {
-                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                message: "Formato de email inválido",
-              },
-            })}
-          />
-          {errors.email && <p>{errors.email.message}</p>}
+            <div className="universal-field">
+              <label  className="universal-label" >Email</label>
+              <input className="universal-input" placeholder="Digite o email..."
+                type="email"
+                {...register("email", {
+                  required: "O email é obrigatório",
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "Formato de email inválido",
+                  },
+                })}
+              />
+              {errors.email && <p className="universal-error">{errors.email.message}</p>}
+            </div>
+            
+            <div className="universal-div-btn">
+              <button className="universal-btn" type="submit">Entrar</button>
+            </div>
+          </form>
         </div>
-
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
+      </div>
+    </main>
   );
 }
 
