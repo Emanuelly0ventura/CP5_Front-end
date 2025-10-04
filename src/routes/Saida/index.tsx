@@ -3,13 +3,18 @@ import { UserContext } from "../../Providencia";
 import { useNavigate } from "react-router-dom";
 
 export default function Saida() {
-  const { user } = useContext(UserContext);
-  const navigate = useNavigate();
+    const { user } = useContext(UserContext);
+    const navigate = useNavigate();
+
+    if (user === null) {
+        return <p>Carregando informações do usuário...</p>;
+    }
+
   return (
     <div>
         {(() => {
             if (user) {
-                return <h1>Bem-vindo!, {user.nome} | NomeUsuario: {user.nomeUsuario} | Email: {user.email}🐹</h1>;
+                return <h1>Bem-vindo! {user.nome} | NomeUsuario: {user.nomeUsuario} | Email: {user.email}🐹</h1>;
                         
             } else {
                 return <p>Nenhum usuário logado</p>;
@@ -31,3 +36,4 @@ export default function Saida() {
     </div>
   );
 }
+

@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../Providencia";
 
 //rode no sistema para ativar a api: npx json-server --watch db.json --port 3000
 
@@ -11,6 +13,7 @@ type LoginData = {
 export default function Login() {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginData>();
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const onSubmit = async (data: LoginData) => {
     const res = await fetch(
@@ -20,6 +23,7 @@ export default function Login() {
 
     if (users.length > 0) {
       localStorage.setItem("usuarioLogado", JSON.stringify(users[0]));
+      setUser(users[0]);
       navigate("/Saida"); 
     } else {
       alert("Usuário ou email inválido!");
