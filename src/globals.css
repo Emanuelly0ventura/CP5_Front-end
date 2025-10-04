@@ -140,5 +140,118 @@
     .error-button-icon {
         @apply text-sm xs:text-base sm:text-lg;
     }
+
+    .portal-main {
+        @apply mx-auto max-w-7xl bg-white
+        p-4
+        xs:p-5
+        sm:p-6
+        md:p-8
+        lg:p-10
+        xl:p-12
+        2xl:p-14;
+    }
+
+    .portal-grid {
+        @apply grid grid-cols-1 gap-6
+        md:grid-cols-[260px,1fr] md:gap-8
+        lg:grid-cols-[280px,1fr]
+        xl:grid-cols-[320px,1fr]
+        2xl:grid-cols-[360px,1fr];
+    }
+
+    .portal-profile {
+        @apply flex flex-col items-center justify-center gap-4
+        xs:flex-col xs:items-center xs:justify-center
+        sm:flex-col gap-5
+        md:flex-row md:gap-6
+        lg:flex-row lg:gap-8
+        xl:flex-row xl:gap-10;
+    }
+
+    .portal-avatar {
+        @apply flex items-center justify-center rounded-full bg-gray-200 text-gray-500
+        text-5xl
+        h-32 w-32
+        xs:h-36 xs:w-36
+        sm:h-40 sm:w-40
+        md:h-44 md:w-44
+        lg:h-48 lg:w-48
+        xl:h-52 xl:w-52;
+    }
+
+    .portal-userinfo {
+        @apply flex flex-col gap-2 text-center items-center md:text-left md:items-start
+        xs:min-w-[14rem] sm:min-w-[16rem];
+    }
+
+    .portal-label {
+        @apply text-gray-700
+        text-sm
+        sm:text-base;
+    }
+
+    .portal-value {
+        @apply text-gray-900
+        text-lg
+        sm:text-xl
+        md:text-2xl;
+    }
+
+
+    .portal-toplink {
+        @apply mb-4 flex flex-col justify-center
+        sm:justify-end;
+    }
+
+    .portal-toplink a,
+    .portal-logout {
+        @apply flex items-center justify-center gap-2 rounded-full bg-[#7E3030] text-white transition-colors duration-200
+        px-4 py-2 text-sm mx-0
+        xs:px-5 xs:py-2.5 xs:text-sm
+        sm:px-6 sm:py-3 sm:text-base
+        md:px-6 md:py-3
+        lg:px-7 lg:py-3
+        hover:bg-[#9D5151];
+    }
     
+    .portal-cards {
+        @apply grid gap-4
+        grid-cols-1
+        xs:grid-cols-2
+        sm:grid-cols-2
+        md:grid-cols-2
+        lg:grid-cols-2
+        xl:grid-cols-2
+        2xl:grid-cols-2;
+    }
+
+    .portal-card {
+        @apply flex flex-col items-center justify-center gap-3 rounded-xl bg-[#9D5151] text-white shadow-lg transition duration-200
+        px-4 py-6
+        xs:px-5 xs:py-6
+        sm:px-6 sm:py-7
+        md:px-6 md:py-8
+        hover:-translate-y-1 hover:bg-[#D46E6E] hover:shadow-xl;
+    }
+
+    .portal-card-icon {
+        @apply rounded-lg bg-white/20
+        p-3
+        sm:p-3.5
+        md:p-4;
+    }
+
+    .portal-icon {
+        @apply h-7 w-7
+        sm:h-8 sm:w-8
+        md:h-9 md:w-9;
+    }
+
+    .portal-card-title {
+        @apply text-center font-semibold
+        text-sm
+        sm:text-base
+        md:text-lg;
+    }
 }
