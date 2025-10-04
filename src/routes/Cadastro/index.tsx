@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import type { Usuario } from "../../type/tipoUsuario";
 
+//rode no sistema para ativar a api: npx json-server --watch db.json --port 3000
+
 type CadastroData = {
   nome: string;
   nomeUsuario: string;

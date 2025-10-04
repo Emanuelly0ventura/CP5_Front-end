@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
+//rode no sistema para ativar a api: npx json-server --watch db.json --port 3000
+
 type LoginData = {
   nomeUsuario: string;
   email: string;

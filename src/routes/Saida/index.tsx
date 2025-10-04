@@ -9,7 +9,8 @@ export default function Saida() {
     <div>
         {(() => {
             if (user) {
-                return <h1>Bem-vindo!, {user.nome}🐹</h1>;
+                return <h1>Bem-vindo!, {user.nome} | NomeUsuario: {user.nomeUsuario} | Email: {user.email}🐹</h1>;
+                        
             } else {
                 return <p>Nenhum usuário logado</p>;
             }
