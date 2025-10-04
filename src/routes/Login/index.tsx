@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { UserContext } from "../../Providencia";
 
 //rode no sistema para ativar a api: npx json-server --watch db.json --port 3000
+//tailwind: npm i tailwindcss @tailwindcss/vite
+
 
 type LoginData = {
   nomeUsuario: string;
