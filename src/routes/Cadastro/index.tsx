@@ -38,34 +38,37 @@ export default function Cadastro() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <h2>Cadastro</h2>
-      <div>
-        <label>Nome</label>
-        <input {...register("nome", { required: "Nome obrigatório" })} />
-        {errors.nome && <p>{errors.nome.message}</p>}
+    <main className="cadastro-main">
+      <div className="universal-form">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <h2 className="universal-title">Cadastro</h2>
+          
+          <div className="universal-field">
+            <label className="universal-label">Nome</label>
+            <input className="universal-input" {...register("nome", { required: "Nome obrigatório" })} />
+            {errors.nome && <p className="universal-error">{errors.nome.message}</p>}
+          </div>
+
+          <div className="universal-field">
+            <label className="universal-label">Nome de usuário</label>
+            <input className="universal-input" {...register("nomeUsuario", { required: "Nome de usuário obrigatório" })} />
+            {errors.nomeUsuario && <p className="universal-error">{errors.nomeUsuario.message}</p>}
+          </div>
+
+          <div className="universal-field">
+            <label className="universal-label">Email</label>
+            <input className="universal-input" type="email" {...register("email", {required: "Email obrigatório",pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Email inválido" }})}/>
+            {errors.email && <p className="universal-error">{errors.email.message}</p>}
+          </div>
+
+          <button className="universal-btn" type="submit">Cadastrar</button>
+
+        </form>
+
       </div>
 
-      <div>
-        <label>Nome de usuário</label>
-        <input {...register("nomeUsuario", { required: "Nome de usuário obrigatório" })} />
-        {errors.nomeUsuario && <p>{errors.nomeUsuario.message}</p>}
-      </div>
-
-      <div>
-        <label>Email</label>
-        <input
-          type="email"
-          {...register("email", {
-            required: "Email obrigatório",
-            pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Email inválido" }
-          })}
-        />
-        {errors.email && <p>{errors.email.message}</p>}
-      </div>
-
-      <button type="submit">Cadastrar</button>
-    </form>
+    </main>
+    
   );
 }
 
