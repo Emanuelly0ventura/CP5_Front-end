@@ -23,12 +23,6 @@ Por fim, o UserContext (criado com o Context API do React) permite compartilhar 
 - **Carolina Nascimento Gonçalves** – RM: 564786  
 - **Emanuelly Ventura do Nascimento** – RM: 562339
 
-## ⚖️ Repositório
+## Repositório
 Link: https://github.com/Emanuelly0ventura/CP5_Front-end.git
 
-
-
-    },
-  },
-])
-```
