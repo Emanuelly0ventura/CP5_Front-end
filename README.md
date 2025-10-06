@@ -1,72 +1,33 @@
-# React + TypeScript + Vite
+# CP5 — Front-End prova sobre user forms - Pet Shop Dias de Cão
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do **Pet Shop Dias de Cão**, um grupo formado para desenvolver um site com a principal utilidade: Os formulários
 
-Currently, two official plugins are available:
+Nosso projeto consiste em um formulário funcional interativo e com um ótimo visual, que seja fácil de usar e facilite a vida dos nossos clientes do pet shop .
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionamentos e utilidades
 
-## React Compiler
+Utilizar os melhores meios para fazer um sistema que não terá falhas e que tenha uma apresentação incrível e funcional, nosso menu depois do formulário acompanha direcionamentos para páginas que ainda estão em construção:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Marcar consultas e exames  
+- Visualizar resultados e documentos   
+- Avaliar serviços e experiências  
+- Ter controle sobre suas informações de saúde  
+- Ajuda em algum aspecto de funcionamento do site
 
-## Expanding the ESLint configuration
+No sistema nos temos a utilização de Vite, React e TypeScript, os códigos utilizam ferramentas modernas do React para criar um sistema funcional de login e cadastro, o React é usado para construir interfaces dinâmicas, permitindo que cada página (como Login, Cadastro e Saida) reaja às ações do usuário, o TypeScript garante segurança no código, definindo tipos para os dados (como o tipo Usuario), evitando erros comuns, o React Hook Form é usado para controlar formulários, validando os campos e exibindo mensagens de erro de forma simples e eficiente, o json-server funciona como uma API simulada, armazenando e retornando os dados dos usuários sem precisar de um servidor real, o localStorage mantém o usuário logado mesmo após recarregar a página, salvando temporariamente as informações no navegador.
+Por fim, o UserContext (criado com o Context API do React) permite compartilhar o estado do usuário em todo o sistema, conectando as páginas e mantendo a navegação fluida.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Equipe
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Juliana da Silva Stigliani** – RM: 561171  
+- **Carolina Nascimento Gonçalves** – RM: 564786  
+- **Emanuelly Ventura do Nascimento** – RM: 562339
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚖️ Repositório
+Link: https://github.com/Emanuelly0ventura/CP5_Front-end.git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
     },
   },
 ])
